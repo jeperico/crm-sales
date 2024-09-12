@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime, time
-import contract
+from contract import SalesContract
+from pydantic import ValidationError
 
 def main():
   st.title('CRM and Sales System')
@@ -14,25 +15,22 @@ def main():
     ['Project with Gemini',
     'Project with ChatGPT',
     'Project with Llama 3.0'])
+  fully_date = datetime.combine(date, hour)
 
   if st.button('Save'):
-    st.write('### Sale Details')
+    try: 
+      sale = SalesContract(
+        email=email,
+        date_hour=fully_date,
+        cost=cost,
+        quantity=quantity,
+        product=product
+      )
+      st.write(sale)
 
-    col1, col2 = st.columns(2)
+    except ValidationError as e:
+      st.error(f"Ops! Something went wrong. Please check the following: {e}")
 
-    with col1:
-      st.write(f"**Seller's Email:** {email}")
-      st.write(f"**Date of Sale:** {date.strftime('%Y-%m-%d')}")
-      st.write(f"**Time of Sale:** {hour.strftime('%H:%M')}")
-
-    with col2:
-      st.write(f"**Total Cost:** ${cost:,.2f}")
-      st.write(f"**Quantity Sold:** {quantity}")
-      st.write(f"**Product:** {product}")
-
-    st.success('Sale successfully registered!')
-
-    fully_date = datetime.combine(date, hour)
 
 if __name__ == '__main__':
   main()
