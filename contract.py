@@ -7,7 +7,7 @@ class ProductEnum(str, Enum):
   ChatGPT = 'Project with ChatGPT'
   Llama = 'Project with Llama 3.0'
 
-class SalesContract(BaseModel):
+class Sales(BaseModel):
   email: EmailStr
   date_hour: datetime
   cost: PositiveFloat

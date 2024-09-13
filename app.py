@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime, time
-from contract import SalesContract
+from contract import Sales
+from database import save_at_postgres
 from pydantic import ValidationError
 
 def main():
@@ -19,14 +20,14 @@ def main():
 
   if st.button('Save'):
     try: 
-      sale = SalesContract(
+      sale = Sales(
         email=email,
         date_hour=fully_date,
         cost=cost,
         quantity=quantity,
         product=product
       )
-      st.write(sale)
+      save_at_postgres(sale)
 
     except ValidationError as e:
       st.error(f"Ops! Something went wrong. Please check the following: {e}")
