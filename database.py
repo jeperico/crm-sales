@@ -25,9 +25,8 @@ def save_at_postgres(data: Sales):
       (data.email, data.date_hour, data.cost, data.quantity, data.product)
     )
     conn.commit()
+    cursor.close()
+    conn.close()
     st.success('Sale saved successfully!')
   except Exception as e:
     st.error(f"Ops! Something went wrong. Please check the following: {e}")
-  finally:
-    cursor.close()
-    conn.close()
