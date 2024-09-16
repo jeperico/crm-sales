@@ -12,6 +12,9 @@ DB_USER = os.getenv('DB_USER')
 DB_PASS = os.getenv('DB_PASS')
 
 def save_at_postgres(data: Sales):
+  """
+  This is the function to connect to database. It saves the sale in the database.
+  """
   try:
     conn = psycopg2.connect(
       dbname=DB_NAME,

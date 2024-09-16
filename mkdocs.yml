@@ -1,0 +1,15 @@
+site_name: Pipeline AI
+
+theme:
+  name: material
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
