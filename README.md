@@ -6,7 +6,7 @@ Criação de uma plataforma de CRM, onde são inseridos os dados da venda, onde 
 ## Avaliable at:
 
 * Project website: https://pipeline-ai.streamlit.app/
-* Project documentation: https://jeperico.github.io/pipeline-ai/
+* Project documentation: https://jeperico.github.io/crm-sales/
 
 
 ## Stack:
