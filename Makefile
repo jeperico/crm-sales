@@ -7,8 +7,8 @@ deps:
 # venv:
 # 	source .venv/bin/activate
 
-run streamlit:
+streamlit:
 	streamlit run app.py
 
-run docs:
+docs:
 	mkdocs serve
