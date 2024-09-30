@@ -1,7 +1,19 @@
 # Project:
 
-Criação de uma plataforma de CRM, onde são inseridos os dados da venda, onde então são enviados para um banco de dados hospedado na Render.
+:brazil: Este projeto consiste em um CRM de vendas que gera valor através de dados e Inteligência Artificial, ao qual está dividido em três partes:
 
+:us: This project consists of a sales CRM that generates value through data and Artificial Inteligence, which is divided into three parts:
+
+
+- :page_with_curl: [CRM Project](https://github.com/jeperico/crm-sales)
+- :file_folder: [DBT Project](https://github.com/jeperico/dbt-sales)
+- :robot: [AI Project](https://github.com/jeperico/ai-sales)
+
+### This Repository:
+
+:brazil: Contém a plataforma da CRM, onde os dados são coletados e enviados para um banco de dados remoto, hospedado na Render.
+
+:us: Contains the CRM platform, where the data is colected and sended to a remote database, hosted on Render.
 
 ## Avaliable at:
 
@@ -10,7 +22,7 @@ Criação de uma plataforma de CRM, onde são inseridos os dados da venda, onde 
 
 
 ## Stack:
-Technologies that I'm using in this project:
+Technologies used in this project:
 
 * ***Pydantic***: Used to validate data type through data contracts.
 * ***Streamlit***: Used to do the UI.
