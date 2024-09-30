@@ -5,7 +5,7 @@
 :us: This project consists of a sales CRM that generates value through data and Artificial Inteligence, which is divided into three parts:
 
 
-- :page_with_curl: [CRM Project](https://github.com/jeperico/crm-sales)
+- :page_with_curl: [CRM Project](https://github.com/jeperico/crm-sales) :pushpin:
 - :file_folder: [DBT Project](https://github.com/jeperico/dbt-sales)
 - :robot: [AI Project](https://github.com/jeperico/ai-sales)
 
